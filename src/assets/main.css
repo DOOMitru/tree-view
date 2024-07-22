@@ -1,0 +1,7 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    font-weight: normal;
+    box-sizing: border-box;
+}
