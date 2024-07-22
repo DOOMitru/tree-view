@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { ref, defineAsyncComponent } from 'vue'
+import { ref } from 'vue'
 import type { TreeNode } from './components/types'
 
-const TreeView = defineAsyncComponent(() => {
-    return import('./components/TreeView.vue')
-})
+import TreeView from './components/TreeView.vue'
 
 const items = ref<Array<TreeNode>>([
     {

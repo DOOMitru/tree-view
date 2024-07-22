@@ -1,49 +1,21 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent } from 'vue'
+import { computed } from 'vue'
 import type { TreeNode, TreeNodePropType } from './types'
 
-const CircleClose = defineAsyncComponent(() => {
-    return import('./icons/CircleClose.vue')
-})
-const DocumentFile = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentFile.vue')
-})
-const DocumentCss = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentCss.vue')
-})
-const DocumentPdf = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentPdf.vue')
-})
-const DocumentVue = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentVue.vue')
-})
-const DocumentZip = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentZip.vue')
-})
-const DocumentHtml = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentHtml.vue')
-})
-const DocumentText = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentText.vue')
-})
-const DocumentWord = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentWord.vue')
-})
-const DocumentExcel = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentExcel.vue')
-})
-const DocumentImage = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentImage.vue')
-})
-const DocumentMarkdown = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentMarkdown.vue')
-})
-const DocumentJavaScript = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentJavaScript.vue')
-})
-const DocumentPowerPoint = defineAsyncComponent(() => {
-    return import('./icons/documents/DocumentPowerPoint.vue')
-})
+import CircleClose from './icons/CircleClose.vue'
+import DocumentFile from './icons/documents/DocumentFile.vue'
+import DocumentCss from './icons/documents/DocumentCss.vue'
+import DocumentPdf from './icons/documents/DocumentPdf.vue'
+import DocumentVue from './icons/documents/DocumentVue.vue'
+import DocumentZip from './icons/documents/DocumentZip.vue'
+import DocumentHtml from './icons/documents/DocumentHtml.vue'
+import DocumentText from './icons/documents/DocumentText.vue'
+import DocumentWord from './icons/documents/DocumentWord.vue'
+import DocumentExcel from './icons/documents/DocumentExcel.vue'
+import DocumentImage from './icons/documents/DocumentImage.vue'
+import DocumentMarkdown from './icons/documents/DocumentMarkdown.vue'
+import DocumentJavaScript from './icons/documents/DocumentJavaScript.vue'
+import DocumentPowerPoint from './icons/documents/DocumentPowerPoint.vue'
 
 const props = defineProps<TreeNodePropType>()
 
@@ -95,17 +67,6 @@ const filename = computed(() => {
 
 <template>
     <div class="row" :style="style">
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 14 14">
-                <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M13.5 13.5h-12a1 1 0 0 1-1-1V.5"
-                />
-            </svg>
-        </div>
         <div class="icon">
             <component :is="fileIcon"></component>
         </div>
@@ -144,6 +105,6 @@ const filename = computed(() => {
     grid-template-areas:
         'x x x'
         'b b b';
-    grid-template-columns: 24px 24px auto 24px;
+    grid-template-columns: 24px auto 24px;
 }
 </style>

@@ -2,7 +2,7 @@
 import type { IconPropType } from '../../types.ts'
 
 withDefaults(defineProps<IconPropType>(), {
-    color: () => 'yellow'
+    color: () => '#cdb040'
 })
 </script>
 

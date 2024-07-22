@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
 import type { TreeNode, TreeViewPropType } from './types'
 
-const TreeFileNode = defineAsyncComponent(() => {
-    return import('./TreeFileNode.vue')
-})
-const TreeFolderNode = defineAsyncComponent(() => {
-    return import('./TreeFolderNode.vue')
-})
+import TreeFileNode from './TreeFileNode.vue'
+import TreeFolderNode from './TreeFolderNode.vue'
 
 withDefaults(defineProps<TreeViewPropType>(), {
     level: () => 0

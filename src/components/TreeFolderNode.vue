@@ -1,34 +1,16 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent } from 'vue'
+import { computed } from 'vue'
 import type { TreeNode, TreeNodePropType } from './types'
 
-const TreeView = defineAsyncComponent(() => {
-    return import('./TreeView.vue')
-})
-const FileAdd = defineAsyncComponent(() => {
-    return import('./icons/FileAdd.vue')
-})
-const FolderAdd = defineAsyncComponent(() => {
-    return import('./icons/FolderAdd.vue')
-})
-const MinusIcon = defineAsyncComponent(() => {
-    return import('./icons/MinusIcon.vue')
-})
-const ArrowDown = defineAsyncComponent(() => {
-    return import('./icons/ArrowDown.vue')
-})
-const ArrowRight = defineAsyncComponent(() => {
-    return import('./icons/ArrowRight.vue')
-})
-const FolderOpen = defineAsyncComponent(() => {
-    return import('./icons/FolderOpen.vue')
-})
-const CircleClose = defineAsyncComponent(() => {
-    return import('./icons/CircleClose.vue')
-})
-const FolderClosed = defineAsyncComponent(() => {
-    return import('./icons/FolderClosed.vue')
-})
+import TreeView from './TreeView.vue'
+import FileAdd from './icons/FileAdd.vue'
+import FolderAdd from './icons/FolderAdd.vue'
+import MinusIcon from './icons/MinusIcon.vue'
+import ArrowDown from './icons/ArrowDown.vue'
+import ArrowRight from './icons/ArrowRight.vue'
+import FolderOpen from './icons/FolderOpen.vue'
+import CircleClose from './icons/CircleClose.vue'
+import FolderClosed from './icons/FolderClosed.vue'
 
 const props = defineProps<TreeNodePropType>()
 
